@@ -1,4 +1,4 @@
-# Next Level Week II | Proffy
+# Next Level Week II - Proffy
 
 <h1 align="center">
     <img alt="Proffy" title="Proffy" src=".github/landing.svg" width="250px" />
@@ -24,7 +24,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O Ecoleta é um marketplace que ajuda pessoas a encontrarem pontos de coleta de resíduos de forma eficiente.
+O Proffy é uma plataforma de estudos online.
 
 ## 🔖 Layout
 
