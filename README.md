@@ -1,7 +1,7 @@
-# Next-Level-Week-II
+# Next-Level-Week-II - Proffy
 
 <h1 align="center">
-    <img alt="Proffy" title="Proffy" src=".github/proffy.svg" width="220px" />
+    <img alt="Proffy" title="Proffy" src=".github/landing.svg" width="250px" />
 </h1>
 
 <p align="center">
@@ -12,17 +12,7 @@
   <a href="#memo-licença">Licença</a>
 </p>
 
-<p align="center">
- <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=7159c1&labelColor=000000" alt="PRs welcome!" />
-
-  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=7159c1&labelColor=000000">
-</p>
-
 <br>
-
-<p align="center">
-  <img alt="Proffy" src=".github/proffy.png" width="100%">
-</p>
 
 ## 🚀 Tecnologias
 
@@ -53,6 +43,6 @@ Lembrando que você irá precisar ter uma conta no [Figma](http://figma.com/).
 
 Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
 
-## :memo: Licença
+## Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
