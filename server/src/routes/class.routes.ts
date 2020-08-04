@@ -1,8 +1,6 @@
 import { Router } from 'express';
 import ClassController from '../controller/ClassController';
 
-const classRouter = Router();
-
-classRouter.post('/', ClassController.store);
-
-export default classRouter;
+export default Router()
+  .get('/', ClassController.index)
+  .post('/', ClassController.store);
