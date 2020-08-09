@@ -7,10 +7,18 @@ interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   name: string;
 }
 
-const TextArea: React.FC<TextAreaProps> = ({ label, name, ...rest }) => {
+const TextArea: React.FC<TextAreaProps> = ({
+  label,
+  name,
+  required,
+  ...rest
+}) => {
   return (
     <div className="textarea-block">
-      <label htmlFor={name}>{label}</label>
+      <label htmlFor={name}>
+        {label}
+        {required && ' *'}
+      </label>
       <textarea id={name} {...rest} />
     </div>
   );
