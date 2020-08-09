@@ -1,6 +1,7 @@
 import React, { useCallback, FormEvent } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { useHistory } from 'react-router-dom';
 
 import { PageHeader, Input, Textarea, Select } from '../../components';
 import warningIcon from '../../assets/images/icons/warning.svg';
@@ -38,6 +39,8 @@ const teacherValidationSchema = Yup.object().shape({
 });
 
 export default function TeacherForm() {
+  const history = useHistory();
+
   const formik = useFormik<TeacherProps>({
     initialValues: {
       name: '',
@@ -79,26 +82,23 @@ export default function TeacherForm() {
     [formik],
   );
 
-  const register = useCallback(
-    async teacherModel => {
-      try {
-        await api.post('/classes', {
-          name: teacherModel.name,
-          avatar: teacherModel.avatar,
-          whatsapp: teacherModel.whatsapp,
-          bio: teacherModel.bio,
-          subject: teacherModel.subject,
-          cost: Number(teacherModel.cost),
-          schedule: teacherModel.scheduleItems,
-        });
-        toast.success('Cadastro efetuado com sucesso');
-        formik.setValues(formik.initialValues);
-      } catch (error) {
-        toast.error('Erro ao realizar cadastro');
-      }
-    },
-    [formik],
-  );
+  const register = useCallback(async teacherModel => {
+    try {
+      await api.post('/classes', {
+        name: teacherModel.name,
+        avatar: teacherModel.avatar,
+        whatsapp: teacherModel.whatsapp,
+        bio: teacherModel.bio,
+        subject: teacherModel.subject,
+        cost: Number(teacherModel.cost),
+        schedule: teacherModel.scheduleItems,
+      });
+      toast.success('Cadastro efetuado com sucesso');
+      setTimeout(() => history.push('/'), 2000);
+    } catch (error) {
+      toast.error('Erro ao realizar cadastro');
+    }
+  }, []);
 
   const handleSubmit = useCallback(
     async (event: FormEvent) => {
