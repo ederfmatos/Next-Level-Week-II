@@ -1,0 +1,15 @@
+export default [
+  { label: 'Química', value: 'quimica' },
+  { label: 'Física', value: 'fisica' },
+  { label: 'Ciências', value: 'ciencias' },
+  { label: 'Educação Física', value: 'educacao-fisica' },
+  { label: 'Matemática', value: 'matematica' },
+  { label: 'Português', value: 'portugues' },
+  { label: 'Filosofia', value: 'Filosofia' },
+  { label: 'Sociologia', value: 'sociologia' },
+  { label: 'Inglês', value: 'ingles' },
+  { label: 'Espanhol', value: 'espanhol' },
+  { label: 'Biologia', value: 'biologia' },
+  { label: 'História', value: 'historia' },
+  { label: 'Geografia', value: 'geografia' },
+];

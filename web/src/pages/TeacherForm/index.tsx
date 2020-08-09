@@ -1,8 +1,10 @@
 import React from 'react';
-import { PageHeader, Input } from '../../components';
+import { PageHeader, Input, Textarea, Select } from '../../components';
 import warningIcon from '../../assets/images/icons/warning.svg';
+import subject from '../../constants/subject';
 
 import './styles.css';
+import { WeekDays } from '../../constants';
 
 export default function TeacherForm() {
   return (
@@ -19,13 +21,35 @@ export default function TeacherForm() {
           <Input name="name" label="Nome completo" />
           <Input name="whatsapp" label="Avatar" />
           <Input name="name" label="Whatsapp" />
+
+          <Textarea name="bio" label="Biografia" />
         </fieldset>
 
         <fieldset>
           <legend>Sobre a aula</legend>
 
-          <Input name="subject" label="Matéria" />
+          <Select name="subject" label="Matéria" options={subject} />
           <Input name="cost" label="Custo da sua hora por aula" />
+        </fieldset>
+
+        <fieldset>
+          <legend>
+            Horários disponíveis
+            <button type="button">+ Novo Horário</button>
+          </legend>
+
+          <ul>
+            <li className="schedule-item">
+              <Select
+                name="week_day"
+                label="Dia da semana"
+                options={WeekDays}
+              />
+
+              <Input name="from" label="Das" type="time" />
+              <Input name="to" label="Até" type="time" />
+            </li>
+          </ul>
         </fieldset>
 
         <footer>
